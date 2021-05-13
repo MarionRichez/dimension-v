@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  overflow: hidden;
+}
+
+.bg-video {
+  height: 100vh;
+  background-color: black;
+  & video {
+    width: 100%;
+    height: auto;
+
+    &:nth-child(1) {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-video {
+    & video {
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

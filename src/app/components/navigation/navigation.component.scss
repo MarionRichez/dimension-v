@@ -1,0 +1,27 @@
+.nav-link {
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.75);
+    padding-bottom: 0.5rem;
+    transform: scaleX(0);
+    transition: none;
+    transform-origin: left;
+  }
+  &:hover::after {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    &::after {
+      transition: transform 350ms ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
