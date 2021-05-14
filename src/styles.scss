@@ -3,10 +3,6 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
-html {
-  overflow: hidden;
-}
-
 .bg-video {
   height: 100vh;
   background-color: black;
@@ -25,6 +21,10 @@ html {
 }
 
 @media (min-width: 992px) {
+  html {
+    overflow: hidden;
+  }
+
   .bg-video {
     & video {
       &:nth-child(1) {
