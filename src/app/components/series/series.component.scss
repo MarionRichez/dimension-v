@@ -1,7 +1,12 @@
-video {
-  position: relative;
-  width: 100%;
+.d-flex {
   height: auto;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 a:first-child {
@@ -30,6 +35,15 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .d-flex {
+    height: 100vh;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+  }
+
   h1 {
     width: 50%;
     height: 100vh;

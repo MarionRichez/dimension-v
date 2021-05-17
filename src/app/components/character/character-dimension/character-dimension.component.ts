@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-dimension.component.scss'],
 })
 export class CharacterDimensionComponent implements OnInit {
-  CharacterList = [
+  characterList = [
     {
       id: 'ht',
       name: 'Henri Tale',

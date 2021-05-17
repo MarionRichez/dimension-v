@@ -6,6 +6,7 @@
 .bg-video {
   height: 100vh;
   background-color: black;
+  overflow: hidden;
   & video {
     width: 100%;
     height: auto;
@@ -21,10 +22,6 @@
 }
 
 @media (min-width: 992px) {
-  html {
-    overflow: hidden;
-  }
-
   .bg-video {
     & video {
       &:nth-child(1) {

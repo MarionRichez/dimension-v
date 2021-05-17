@@ -1,1 +1,14 @@
-<p>character-dimension works!</p>
+<div class="container" *ngFor="let character of characterList">
+  <div>
+    <div>
+      <h2>{{ character.name }}</h2>
+      <p>Title : {{ character.title }}</p>
+      <p>
+        Description : <br />
+        {{ character.description }}
+      </p>
+    </div>
+    <video src="{{ character.screen }}" autoplay [muted]="'muted'" loop></video>
+    <video src="{{ character.mobile }}" autoplay [muted]="'muted'" loop></video>
+  </div>
+</div>
