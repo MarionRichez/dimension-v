@@ -1,1 +1,46 @@
-<p>character-lastorder works!</p>
+<div class="dropdown show fixed-top">
+  <div>
+    <a
+      *ngFor="let character of characterList"
+      routerLink="./"
+      fragment="{{ character.id }}"
+      >{{ character.name }}</a
+    >
+  </div>
+</div>
+<div
+  class="
+    block
+    d-flex
+    justify-content-end
+    mr-5
+    align-items-center
+    flex-lg-row flex-column
+  "
+  *ngFor="let character of characterList"
+>
+  <div class="character">
+    <h1>{{ character.name }}</h1>
+    <h6>Title : {{ character.title }}</h6>
+    <p>
+      <strong>Description : </strong><br />
+      {{ character.description }}
+    </p>
+  </div>
+  <!-- <div id="{{ character.id }}"></div> -->
+  <video
+    id="{{ character.id }}"
+    class="screen"
+    src="{{ character.screen }}"
+    autoplay
+    [muted]="'muted'"
+    loop
+  ></video>
+  <video
+    class="mobile"
+    src="{{ character.mobile }}"
+    autoplay
+    [muted]="'muted'"
+    loop
+  ></video>
+</div>

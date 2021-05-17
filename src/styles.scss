@@ -3,6 +3,10 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-video {
   height: 100vh;
   background-color: black;

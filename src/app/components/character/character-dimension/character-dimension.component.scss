@@ -1,1 +1,39 @@
+.block {
+  background-color: black;
+}
 
+video {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.character {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  text-align: justify;
+  width: 55%;
+  padding: 5rem 4rem;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-bottom-left-radius: 2.5rem;
+  border-top-left-radius: 2.5rem;
+}
+
+.screen {
+  display: none;
+}
+
+.mobile {
+  margin-top: -0.5rem;
+}
+
+@media (min-width: 992px) {
+  .screen {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}

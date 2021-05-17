@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-character-lastorder',
@@ -19,7 +20,7 @@ export class CharacterLastorderComponent implements OnInit {
     {
       id: 'ht',
       name: 'Henri Tale',
-      title: 'Garde de sécurité : recrue',
+      title: 'Garde de sécurité (recrue)',
       description:
         'Descendant des nouveaux habitants venus après l’alliances entre les 2 planètes. Fils de lieutenant de division d’assaut orbital. Il s’est fait engager comme garde de sécurité de la ville, on pourrait appeler cela une « police » mais leur mission peuvent avoir certaines variations militaires de niveau terrestre, aériennes et orbital. Il a 23 ans et est une recrue fraîchement sortie des camps d’entrainement.',
       screen: '../../../../assets/video/character/DV-LO_Henri_Tale.mp4',
@@ -28,7 +29,7 @@ export class CharacterLastorderComponent implements OnInit {
     {
       id: 'tr',
       name: 'Thomas Ram',
-      title: 'Professeur en robotique et l’Intelligence Artificielle',
+      title: 'Professeur en robotique et intelligence artificielle',
       description:
         'Scientifique de renommée planétaire et un génie dans le domaine de la robotique et l’intelligence artificielle. Jeune marié et enthousiaste étendre ses recherches et son savoir du monde. Grand rêveur et naïf sur le nerf du Monde humain.',
       screen: '../../../../assets/video/character/LO_Thomas_Ram.mp4',
@@ -44,8 +45,21 @@ export class CharacterLastorderComponent implements OnInit {
       mobile: '../../../../assets/video/mobile/LO_Clayton_Fhalse.mp4',
     },
   ];
+  fragment: string;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      this.fragment = fragment;
+    });
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+      if (this.fragment) {
+        document.querySelector('#' + this.fragment).scrollIntoView();
+      }
+    } catch (e) {}
+  }
 }
