@@ -1,6 +1,18 @@
-<div class="dropdown show fixed-top">
-  <div>
+<div class="dropdown fixed-top position-fixed">
+  <button
+    (click)="toggle()"
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    id="dropdownMenuButton"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <i class="bi bi-person-lines-fill"></i>
+  </button>
+  <div *ngIf="show" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a
+      class="dropdown-item"
       *ngFor="let character of characterList"
       routerLink="./"
       fragment="{{ character.id }}"

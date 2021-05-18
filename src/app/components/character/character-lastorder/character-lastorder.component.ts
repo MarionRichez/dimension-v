@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-character-lastorder',
@@ -46,6 +46,7 @@ export class CharacterLastorderComponent implements OnInit {
     },
   ];
   fragment: string;
+  public show: boolean = false;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -61,5 +62,9 @@ export class CharacterLastorderComponent implements OnInit {
         document.querySelector('#' + this.fragment).scrollIntoView();
       }
     } catch (e) {}
+  }
+
+  toggle() {
+    this.show = !this.show;
   }
 }

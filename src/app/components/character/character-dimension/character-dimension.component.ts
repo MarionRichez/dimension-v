@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-character-dimension',
@@ -80,7 +81,26 @@ export class CharacterDimensionComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  fragment: string;
+  public show: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      this.fragment = fragment;
+    });
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+      if (this.fragment) {
+        document.querySelector('#' + this.fragment).scrollIntoView();
+      }
+    } catch (e) {}
+  }
+
+  toggle() {
+    this.show = !this.show;
+  }
 }
