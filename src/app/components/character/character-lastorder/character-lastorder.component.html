@@ -39,7 +39,6 @@
       {{ character.description }}
     </p>
   </div>
-  <!-- <div id="{{ character.id }}"></div> -->
   <video
     id="{{ character.id }}"
     class="screen"
@@ -49,6 +48,7 @@
     loop
   ></video>
   <video
+    id="{{ character.id }}"
     class="mobile"
     src="{{ character.mobile }}"
     autoplay
