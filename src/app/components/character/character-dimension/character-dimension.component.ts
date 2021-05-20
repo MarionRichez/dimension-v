@@ -40,7 +40,7 @@ export class CharacterDimensionComponent implements OnInit {
       name: 'Richt Ofen',
       title: 'UNKNOW',
       description:
-        'Directeur du centre de recherche et ancien <span class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae sapien sapien. Etiam at mi pulvinar, viverra augue ac, mollis nisl. Nam sodales dui quis risus fringilla, at luctus mauris dignissim. Phasellus maximus laoreet velit, nec imperdiet turpis accumsan in.</span>',
+        'Directeur du centre de recherche et ancien █████████████ ████ ██████████ ██ █████ ███████ ███████████ ███████ ██ █████ ███████',
       screen: '../../../../assets/video/character/DV_M.Richt_ofen.mp4',
       mobile: '../../../../assets/video/mobile/DV_M.Richt_ofen.mp4',
     },
@@ -58,7 +58,7 @@ export class CharacterDimensionComponent implements OnInit {
       name: 'Passant N°1',
       title: 'NO TITLE',
       description:
-        'Amis du sdf <span class="hidden">Aenean tincidunt placerat lorem, vitae.</span> sol<span class="hidden">Aenean tincidunt placerat lorem, vitae.</span> après la ch<span class="hidden">Aenean tincidunt placerat lorem, vitae.</span>',
+        'Amis du sdf ███████ ████████ sol███████ ██████████ après la ch███████ ██████████ ███████ █████████ ███████ ███████████',
       screen: '../../../../assets/video/character/clodo1.mp4',
       mobile: '../../../../assets/video/mobile/clodo1.mp4',
     },
@@ -67,7 +67,7 @@ export class CharacterDimensionComponent implements OnInit {
       name: 'Passant N°2',
       title: 'NO TITLE',
       description:
-        'Sdf aux ragots et ex-mi <span class="hidden">Aenean tincidunt placerat lorem, vitae.</span> renvo<span class="hidden">Aenean tincidunt placerat lorem, vitae.</span>',
+        'Sdf aux ragots et ex-mi ████████████ ███████ renvo███████ ████████ ███████ ███████████ ███████ ██████████',
       screen: '../../../../assets/video/character/clodo2.mp4',
       mobile: '../../../../assets/video/mobile/clodo2.mp4',
     },
@@ -82,7 +82,7 @@ export class CharacterDimensionComponent implements OnInit {
   ];
 
   fragment: string;
-  public show: boolean = false;
+  public show = false;
 
   constructor(private route: ActivatedRoute) {}
 
