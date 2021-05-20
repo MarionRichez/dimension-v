@@ -1,6 +1,6 @@
 <div class="dropdown fixed-top position-fixed">
   <button
-    (click)="(show != show)"
+    (click)="toggle()"
     class="btn btn-secondary dropdown-toggle"
     type="button"
     id="dropdownMenuButton"
@@ -10,7 +10,11 @@
   >
     <i class="bi bi-person-lines-fill"></i>
   </button>
-  <div *ngIf="show" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div
+    *ngIf="show"
+    class="dropdown-menu d-flex flex-column"
+    aria-labelledby="dropdownMenuButton"
+  >
     <a
       class="dropdown-item"
       *ngFor="let character of characterList"
@@ -22,26 +26,26 @@
 </div>
 <div
   class="
-    block
     d-flex
     justify-content-end
     mr-5
     align-items-center
     flex-lg-row flex-column
+    bg-dark
   "
   *ngFor="let character of characterList"
 >
-  <div class="character">
+  <div class="character position-absolute text-left text-white">
     <h1>{{ character.name }}</h1>
     <h6>Title : {{ character.title }}</h6>
-    <p>
+    <p class="text-justify">
       <strong>Description : </strong><br />
       {{ character.description }}
     </p>
   </div>
   <video
     id="{{ character.id }}"
-    class="screen"
+    class="screen position-relative"
     src="{{ character.screen }}"
     autoplay
     [muted]="'muted'"
@@ -49,7 +53,7 @@
   ></video>
   <video
     id="{{ character.id }}"
-    class="mobile"
+    class="mobile position-relative"
     src="{{ character.mobile }}"
     autoplay
     [muted]="'muted'"

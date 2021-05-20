@@ -99,4 +99,8 @@ export class CharacterDimensionComponent implements OnInit {
       }
     } catch (e) {}
   }
+
+  toggle() {
+    this.show = !this.show;
+  }
 }

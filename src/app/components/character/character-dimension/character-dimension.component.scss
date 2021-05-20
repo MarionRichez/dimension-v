@@ -1,38 +1,21 @@
-.block {
-  background-color: black;
-}
-
 .dropdown {
   margin: 4rem 0.7rem;
 }
 
-.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
 .character {
-  position: absolute;
   height: auto;
   z-index: 5;
-  color: white;
-  text-align: left;
   width: 90%;
   font-size: 0.7rem;
   padding: 2rem;
   background-color: rgba(20, 20, 20, 0.85);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+}
 
-  & p {
-    text-align: justify;
-  }
+video {
+  width: 100%;
+  height: auto;
 }
 
 .screen {

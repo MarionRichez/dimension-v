@@ -63,4 +63,8 @@ export class CharacterLastorderComponent implements OnInit {
       }
     } catch (e) {}
   }
+
+  toggle() {
+    this.show = !this.show;
+  }
 }
