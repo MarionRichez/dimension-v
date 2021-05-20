@@ -7,6 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./character-dimension.component.scss'],
 })
 export class CharacterDimensionComponent implements OnInit {
+  fragment: string;
+  public show = false;
+
   characterList = [
     {
       id: 'ht',
@@ -80,9 +83,6 @@ export class CharacterDimensionComponent implements OnInit {
       mobile: '../../../../assets/video/mobile/clodo3.mp4',
     },
   ];
-
-  fragment: string;
-  public show = false;
 
   constructor(private route: ActivatedRoute) {}
 

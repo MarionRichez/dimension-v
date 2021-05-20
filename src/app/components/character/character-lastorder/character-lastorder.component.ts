@@ -7,6 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./character-lastorder.component.scss'],
 })
 export class CharacterLastorderComponent implements OnInit {
+  fragment: string;
+  show = false;
+
   characterList = [
     {
       id: 'gr',
@@ -45,8 +48,6 @@ export class CharacterLastorderComponent implements OnInit {
       mobile: '../../../../assets/video/mobile/LO_Clayton_Fhalse.mp4',
     },
   ];
-  fragment: string;
-  show = false;
 
   constructor(private route: ActivatedRoute) {}
 

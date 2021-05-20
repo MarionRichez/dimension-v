@@ -1,15 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-series-lastorder',
   templateUrl: './series-lastorder.component.html',
-  styleUrls: ['./series-lastorder.component.scss']
+  styleUrls: ['./series-lastorder.component.scss'],
 })
 export class SeriesLastorderComponent implements OnInit {
+  fragment: string;
+  show = false;
 
-  constructor() { }
+  chapter = [{ id: '', title: '', paragraph: '' }];
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      this.fragment = fragment;
+    });
   }
 
+  ngAfterViewChecked(): void {
+    try {
+      if (this.fragment) {
+        document.querySelector('#' + this.fragment).scrollIntoView();
+      }
+    } catch (e) {}
+  }
+
+  toggle() {
+    this.show = !this.show;
+  }
 }
