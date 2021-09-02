@@ -1,0 +1,13 @@
+.card-contact {
+  height: auto;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card-contact {
+    width: 60%;
+  }
+}
