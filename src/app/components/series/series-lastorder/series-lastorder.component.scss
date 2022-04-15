@@ -4,8 +4,8 @@
 
 .bg-img {
   background-repeat: repeat;
-  position: relative;
-  height: 100vh;
+  position: absolute;
+  height: 500vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,3 +13,18 @@
   background-color: #292929;
   background-image: url("../../../../assets/img/asfalt-light.png");
 }
+
+.book {
+  position: relative;
+}
+
+.id {
+  display: flex;
+  height: 10vh;
+}
+
+.chapter {
+  color: white;  
+}
+
+

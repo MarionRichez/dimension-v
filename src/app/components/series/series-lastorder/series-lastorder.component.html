@@ -17,12 +17,20 @@
   >
     <a
       class="dropdown-item"
-      *ngFor="let character of characterList"
+      *ngFor="let chapter of chapterList"
       routerLink="./"
-      fragment="{{ character.id }}"
-      >{{ character.name }}</a
+      fragment="{{ chapter.id }}"
+      >{{ chapter.title }}</a
     >
   </div>
 </div>
-<div class="container-fluid"></div>
 <div class="bg-img"></div>
+<div class="container">
+  <div class="book">
+    <div class="chapter" *ngFor="let chapter of chapterList">
+      <div class="id" id="{{ chapter.id }}"></div>
+      <h3>{{ chapter.title }}</h3>
+      <p style="white-space:pre-wrap">{{ chapter.paragraph }}</p>
+    </div>
+  </div>
+</div>
